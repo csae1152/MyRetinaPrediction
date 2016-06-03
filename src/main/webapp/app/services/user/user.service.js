@@ -2,13 +2,13 @@
     'use strict';
 
     angular
-        .module('sampleApplicationApp')
-        .factory('User', User);
+        .module('myBuddies')
+        .factory('Farmer', Farmer);
 
     User.$inject = ['$resource'];
 
     function User ($resource) {
-        var service = $resource('api/users/:login', {}, {
+        var service = $resource('api/users/:farmers', {}, {
             'query': {method: 'GET', isArray: true},
             'get': {
                 method: 'GET',
@@ -22,6 +22,6 @@
             'delete':{ method:'DELETE'}
         });
 
-        return service;
+        return farmerService;
     }
 })();
