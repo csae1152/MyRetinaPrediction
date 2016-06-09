@@ -26,6 +26,7 @@
                 translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                     $translatePartialLoader.addPart('local');
                     $translatePartialLoader.removePart('global');
+                    $translatePartialLoader.updatePart('partial');
                 }]
             }
         });
